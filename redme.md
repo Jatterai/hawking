@@ -1,0 +1,1 @@
+# Repository for Hawking School Courses homework.
