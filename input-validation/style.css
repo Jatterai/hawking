@@ -1,0 +1,141 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:100,100italic,300,300italic,regular,italic,700,700italic,900,900italic);
+
+body {
+	background-color: #333;
+	color: white;
+	font-family: "Lato";
+}
+
+.header {
+}
+.main {
+}
+.main__container {
+	max-width: 1240;
+	padding: 0 20px;
+	margin: 0 auto;
+}
+.validation {
+	padding-top: 50px;
+}
+
+.title {
+	margin: 0 auto;
+	width: fit-content;
+	position: relative;
+	text-align: center;
+	color: hotpink;
+	font-size: calc(35px + 15 * (100vw / 1280));
+	text-shadow: -2px 2px 0px rgba(0, 0, 0, 0.425);
+	line-height: 1.5;
+}
+.validation__title {
+	margin-bottom: 0.7em;
+}
+
+.validation__form {
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 70%;
+	gap: 20px;
+}
+.form {
+}
+.form__input {
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	transition: all 150ms ease-in-out 0s;
+	flex: 1 0 50%;
+	line-height: 2;
+	font-size: 1.5rem;
+	padding-left: 0.5em;
+	border-radius: 10px;
+	border: none;
+	box-shadow: -4px 4px 0px rgb(86, 86, 86);
+}
+
+.form__input.wrong {
+	animation-name: wrong;
+	animation-duration: 500ms;
+	box-shadow: -4px 4px 0px rgb(86, 86, 86), 0px 0px 0px 2px rgb(197, 34, 34) inset;
+}
+@keyframes wrong {
+	50% {
+		background: rgb(186, 92, 92);
+		box-shadow: -4px 4px 3px rgb(133, 22, 22);
+	}
+}
+.form__input:focus {
+	border: none;
+	outline: none;
+}
+.form__input-sumbit {
+	flex: 1 0 30%;
+	background: linear-gradient(to top, hotpink 0%, rgb(255, 105, 165) 100%);
+	font-weight: 700;
+	color: white;
+	cursor: pointer;
+	box-shadow: -4px 4px 0px rgb(168, 49, 104);
+	top: 0;
+	left: 0;
+}
+
+.form__input-sumbit:active {
+	top: 2px;
+	left: -2px;
+	box-shadow: -2px 2px 0px rgb(168, 49, 104);
+}
+
+.validation__alert {
+	font-family: monospace;
+	text-align: center;
+	font-weight: 400;
+	font-size: 2.3em;
+	letter-spacing: 0.1em;
+	color: yellow;
+}
+
+.validation__alert span {
+	font-weight: 700;
+}
+.footer {
+}
+
+@media (max-width: 767px) {
+	body {
+	}
+
+	.header {
+	}
+	.main {
+	}
+	.main__container {
+		max-width: 1240;
+		padding: 0 20px;
+		margin: 0 auto;
+	}
+	.validation {
+		padding-top: 20px;
+	}
+	.validation__title {
+	}
+	.title {
+		font-size: calc(25px + (10 + 10 * 0.7) * ((100vw - 320px) / 1280));
+	}
+	.validation__form {
+		flex-direction: column;
+		max-width: 100%;
+	}
+	.form {
+	}
+	.form__input {
+		flex: 1 0 80%;
+	}
+	.form__input-sumbit {
+		font-size: 1.2rem;
+	}
+	.footer {
+	}
+}
