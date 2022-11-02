@@ -1,0 +1,256 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Babylonica&family=Gugi&family=Shadows+Into+Light&display=swap");
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/*--------------------*/
+@font-face {
+  font-family: 'PFDinTextCondPro';
+  src: url("../fonts/PFDinTextCondPro-Regular.eot");
+  src: url("../fonts/PFDinTextCondPro-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/PFDinTextCondPro-Regular.woff") format("woff"), url("../fonts/PFDinTextCondPro-Regular.ttf") format("truetype"), url("../fonts/PFDinTextCondPro-Regular.svg#PFDinTextCondPro-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PFDinTextCondPro';
+  src: url("../fonts/PFDinTextCondPro-Medium.eot");
+  src: url("../fonts/PFDinTextCondPro-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/PFDinTextCondPro-Medium.woff") format("woff"), url("../fonts/PFDinTextCondPro-Medium.ttf") format("truetype"), url("../fonts/PFDinTextCondPro-Medium.svg#PFDinTextCondPro-Medium") format("svg");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Marvin';
+  src: url("../fonts/Marvin.eot");
+  src: url("../fonts/Marvin.eot?#iefix") format("embedded-opentype"), url("../fonts/Marvin.woff") format("woff"), url("../fonts/Marvin.ttf") format("truetype"), url("../fonts/Marvin.svg#Marvin") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lorenco';
+  src: url("../fonts/Lorenco-Font4You.eot");
+  src: url("../fonts/Lorenco-Font4You.eot?#iefix") format("embedded-opentype"), url("../fonts/Lorenco-Font4You.woff") format("woff"), url("../fonts/Lorenco-Font4You.ttf") format("truetype"), url("../fonts/Lorenco-Font4You.svg#Lorenco-Font4You") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'American Captain';
+  src: url("../fonts/AmericanCaptain.eot");
+  src: url("../fonts/AmericanCaptain.eot?#iefix") format("embedded-opentype"), url("../fonts/AmericanCaptain.woff") format("woff"), url("../fonts/AmericanCaptain.ttf") format("truetype"), url("../fonts/AmericanCaptain.svg#AmericanCaptain") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Aveny T';
+  src: url("../fonts/AvenyT.eot");
+  src: url("../fonts/AvenyT.eot?#iefix") format("embedded-opentype"), url("../fonts/Ave../fonts/nyT.woff") format("woff"), url("../fonts/AvenyT.ttf") format("truetype"), url("../fonts/AvenyT.svg#AvenyT") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*--------------шрифты---------------*/
+body {
+  font-family: "PT Sans";
+  -webkit-transition: all 500ms ease-in-out 0s;
+  transition: all 500ms ease-in-out 0s;
+  background-color: powderblue;
+}
+
+body.powderblue-theme {
+  background-color: powderblue;
+}
+
+body.plum-theme {
+  background-color: plum;
+}
+
+body.moccasin-theme {
+  background-color: moccasin;
+}
+
+body.lightgreen-theme {
+  background-color: lightgreen;
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.bg-change__buttons {
+  margin: 0 auto;
+  max-width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 20px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.bg-change__button {
+  -webkit-transition: all 100ms linear 0s;
+  transition: all 100ms linear 0s;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 200px;
+          flex: 0 1 200px;
+  aspect-ratio: 1 /1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  letter-spacing: 0.3em;
+  padding: 0 1em;
+  -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.183);
+          box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.183);
+}
+
+.bg-change__button:active, .bg-change__button.active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+.bg-change #moccasin {
+  background-color: moccasin;
+}
+
+.bg-change #lightgreen {
+  background-color: lightgreen;
+}
+
+.bg-change #powderblue {
+  background-color: powderblue;
+}
+
+.bg-change #plum {
+  background-color: plum;
+}
+
+._container {
+  max-width: 1280px;
+  padding: 0 20px;
+}
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1em;
+}
+
+.test__text {
+  line-height: 188%;
+}
+
+section {
+  padding-top: 50px;
+}
