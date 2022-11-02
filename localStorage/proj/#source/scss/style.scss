@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Babylonica&family=Gugi&family=Shadows+Into+Light&display=swap");
+
+@import "nullstyle";
+@import "fonts";
+
+body {
+	font-family: "PT Sans";
+	transition: all 500ms ease-in-out 0s;
+	background-color: powderblue;
+	&.powderblue-theme {
+		background-color: powderblue;
+	}
+	&.plum-theme {
+		background-color: plum;
+	}
+	&.moccasin-theme {
+		background-color: moccasin;
+	}
+	&.lightgreen-theme {
+		background-color: lightgreen;
+	}
+}
+
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+.bg-change {
+	&__container {
+	}
+
+	&__title {
+	}
+
+	&__buttons {
+		margin: 0 auto;
+		max-width: 80%;
+		display: flex;
+		justify-content: space-between;
+		gap: 20px;
+		flex-wrap: wrap;
+	}
+
+	&__button {
+		transition: all 100ms linear 0s;
+		flex: 0 1 200px;
+		aspect-ratio: 1 /1;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+		letter-spacing: 0.3em;
+		padding: 0 1em;
+		box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.183);
+		&:active,
+		&.active {
+			transform: scale(0.9);
+		}
+	}
+
+	#moccasin {
+		background-color: moccasin;
+	}
+
+	#lightgreen {
+		background-color: lightgreen;
+	}
+
+	#powderblue {
+		background-color: powderblue;
+	}
+
+	#plum {
+		background-color: plum;
+	}
+}
+._container {
+	max-width: 1280px;
+	padding: 0 20px;
+}
+
+.title {
+	text-align: center;
+	font-size: 2rem;
+	font-weight: 700;
+	margin-bottom: 1em;
+}
+.test {
+	&__container {
+	}
+
+	&__title {
+	}
+
+	&__text {
+		line-height: 188%;
+	}
+}
+
+section {
+	padding-top: 50px;
+}

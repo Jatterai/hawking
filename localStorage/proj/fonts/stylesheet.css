@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'PF Din Text Cond Pro';
+    src: url('PFDinTextCondPro-Regular.eot');
+    src: url('PFDinTextCondPro-Regular.eot?#iefix') format('embedded-opentype'),
+        url('PFDinTextCondPro-Regular.woff') format('woff'),
+        url('PFDinTextCondPro-Regular.ttf') format('truetype'),
+        url('PFDinTextCondPro-Regular.svg#PFDinTextCondPro-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PF Din Text Cond Pro';
+    src: url('PFDinTextCondPro-Medium.eot');
+    src: url('PFDinTextCondPro-Medium.eot?#iefix') format('embedded-opentype'),
+        url('PFDinTextCondPro-Medium.woff') format('woff'),
+        url('PFDinTextCondPro-Medium.ttf') format('truetype'),
+        url('PFDinTextCondPro-Medium.svg#PFDinTextCondPro-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Marvin';
+    src: url('Marvin.eot');
+    src: url('Marvin.eot?#iefix') format('embedded-opentype'),
+        url('Marvin.woff') format('woff'),
+        url('Marvin.ttf') format('truetype'),
+        url('Marvin.svg#Marvin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
