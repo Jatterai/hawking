@@ -1,0 +1,49 @@
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: #0000002a;
+	color: hotpink;
+	padding: 0 20px;
+}
+
+.title {
+	font-weight: 700;
+	font-size: 2rem;
+	letter-spacing: -0.1em;
+	margin: 0;
+	a,
+	a:hover,
+	a:active {
+		font-size: inherit;
+		font-weight: inherit;
+		color: inherit;
+	}
+}
+
+.nav {
+}
+
+.list {
+	display: flex;
+	list-style: none;
+	font-size: 1.5rem;
+}
+
+.item {
+	margin: 0;
+	&:not(:last-of-type) {
+		margin-right: 30px;
+	}
+}
+
+.link {
+	transition: color 200ms;
+	color: #fefefe;
+	&:hover {
+		color: pink;
+	}
+	&.active {
+		color: hotpink;
+	}
+}

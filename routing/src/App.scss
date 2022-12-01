@@ -1,0 +1,88 @@
+@import url(https://fonts.googleapis.com/css?family=PT+Sans:regular,italic,700,700italic);
+
+#root {
+	margin: 0 auto;
+	min-height: 105vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.container {
+	padding: 50px 20px;
+	color: hotpink;
+	font-family: "PT Sans";
+}
+
+.p {
+	font-size: 16px;
+	padding: 0 50px;
+	line-height: 2;
+}
+.title {
+	color: hotpink;
+	font-size: 2rem;
+	text-align: center;
+	font-weight: 700;
+	line-height: 1;
+	margin: 0;
+	margin-bottom: 40px;
+}
+
+.posts--container {
+	padding: 0 20px;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(100px, 30%));
+	gap: 20px;
+	justify-content: space-between;
+}
+
+.post {
+	text-align: center;
+	background-color: rgba(245, 222, 179, 0.194);
+	border-radius: 10px;
+	box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.354);
+	padding: 1em;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	h5 {
+		margin: 0;
+	}
+	a,
+	a:visited {
+		color: white;
+		text-decoration: underline;
+	}
+}
+
+.main {
+	flex: 1 0 auto;
+	display: flex;
+	flex-direction: column;
+}
+
+.header {
+	color: hotpink;
+	background-color: #03080667;
+	padding: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 40px;
+
+	&__link,
+	&__link:visited {
+		color: hotpink;
+		font-size: 1.5rem;
+	}
+}
+
+.footer {
+	background: rgba(0, 0, 0, 0.226);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 30px;
+	margin: 0;
+}
