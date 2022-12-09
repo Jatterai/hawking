@@ -1,0 +1,18 @@
+.error_link {
+	display: block;
+	font-size: 2rem;
+	padding: 0.5em 1em;
+	color: yellow;
+	background: rgba(0, 0, 0, 0.194);
+	border-radius: 10px;
+	border: none;
+	font-family: monospace;
+	a {
+		margin: 0;
+	}
+}
+
+.title {
+	color: yellow;
+	font-size: 5rem;
+}

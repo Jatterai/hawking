@@ -1,0 +1,32 @@
+.header,
+.header * {
+	box-sizing: border-box;
+}
+
+.header {
+	margin: 0;
+	padding: 0;
+	background: rgba(0, 0, 0, 0.174);
+	display: flex;
+	justify-content: center;
+}
+
+.list {
+	display: flex;
+}
+
+.link {
+	display: block;
+	font-family: monospace;
+	font-size: 32px;
+	color: yellow;
+	text-decoration: none;
+	padding: 1em;
+	transition: 200ms;
+	&:visited {
+		color: inherit;
+	}
+	&:hover {
+		background: hotpink;
+	}
+}
