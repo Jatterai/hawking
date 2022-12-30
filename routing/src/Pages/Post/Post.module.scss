@@ -1,0 +1,36 @@
+.container {
+	flex: 1 0 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding-bottom: 20px;
+}
+
+p {
+	margin-bottom: auto;
+}
+
+.btns_container {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+}
+
+.button {
+	display: block;
+	border: none;
+	border-radius: 5px;
+	padding: 0.5em 1em;
+	font-weight: 500;
+	color: #091511;
+	background-color: hotpink;
+	font-size: 1.1em;
+	cursor: pointer;
+	margin-bottom: 20px;
+	&:hover {
+		color: black;
+	}
+	&:focus {
+		outline: none;
+	}
+}
