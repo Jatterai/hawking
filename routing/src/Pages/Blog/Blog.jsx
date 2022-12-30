@@ -1,23 +1,17 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useSearchParams } from 'react-router-dom';
+import React, { useState, Suspense } from 'react';
+import { Link, useLoaderData, useSearchParams, defer, Await } from 'react-router-dom';
 
 const Blog = () => {
 	const [searchParams, setSearchParams] = useSearchParams();
 	const query = searchParams.get('post') || '';
 	const [searchInput, setSearchInput] = useState(query);
-	const [posts, setPosts] = useState([]);
-	useEffect(() => {
-		fetch('https://jsonplaceholder.typicode.com/posts')
-			.then(res => res.json())
-			.then(data => setPosts(data))
-
-	}, []);
-
+	const { posts } = useLoaderData();
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		setSearchParams({ post: searchInput });
 	}
 
+	console.log(posts)
 
 	return (
 		<div className="container">
@@ -33,20 +27,38 @@ const Blog = () => {
 					<i class="fa-solid fa-magnifying-glass"></i>
 				</button>
 			</form>
-			<div className="posts--container">
-				{
-					posts
-						.filter(e => e.title.toLowerCase().includes(query.toLowerCase()))
-						.map(post => (
-							<div className='post' key={post.id}>
-								<h5>{post.title}</h5>
-								<Link to={`/blog/${post.id}`}>learn more</Link>
+			<Suspense fallback={<h2>loading...</h2>}>
+				<Await resolve={posts}>
+					{
+						(posts) => (
+							<div className="posts--container">
+								{
+									posts
+										.filter(e => e.title.toLowerCase().includes(query.toLowerCase()))
+										.map(post => (
+											<div className='post' key={post.id}>
+												<h5>{post.title}</h5>
+												<Link to={`/blog/${post.id}`}>learn more</Link>
+											</div>
+										))
+								}
 							</div>
-						))
-				}
-			</div>
+						)
+					}
+				</Await>
+			</Suspense>
+
 		</div>
 	)
+}
+
+const getPosts = async () => {
+	const res = await fetch('https://jsonplaceholder.typicode.com/posts');
+	return res.json()
+}
+
+export const postsLoader = async () => {
+	return defer({ posts: getPosts() })
 }
 
 export default Blog
