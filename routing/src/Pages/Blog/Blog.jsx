@@ -1,7 +1,7 @@
 import React, { useState, Suspense } from 'react';
 import { Link, useLoaderData, useSearchParams, defer, Await } from 'react-router-dom';
 
-const Blog = () => {
+export const Blog = () => {
 	const [searchParams, setSearchParams] = useSearchParams();
 	const query = searchParams.get('post') || '';
 	const [searchInput, setSearchInput] = useState(query);
@@ -60,5 +60,3 @@ const getPosts = async () => {
 export const postsLoader = async () => {
 	return defer({ posts: getPosts() })
 }
-
-export default Blog

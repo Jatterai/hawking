@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../hooks/useAuth.ts'
 
-const Loginpage = () => {
+export const Loginpage = () => {
 	const { isAuth, toggleIsAuth } = useAuth();
 	const navigate = useNavigate();
 	const location = useLocation();
@@ -23,5 +23,3 @@ const Loginpage = () => {
 		</div>
 	)
 }
-
-export default Loginpage

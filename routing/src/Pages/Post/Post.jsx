@@ -3,6 +3,7 @@ import { useNavigate, useLoaderData, Await, defer, useAsyncValue } from 'react-r
 import styles from './Post.module.scss';
 import { Link } from 'react-router-dom';
 
+
 const PostBody = () => {
 	const post = useAsyncValue();
 	return (
@@ -14,7 +15,7 @@ const PostBody = () => {
 }
 
 
-const Post = () => {
+export const Post = () => {
 	const navigate = useNavigate();
 	const goBack = () => navigate(-1);
 	const { post, id } = useLoaderData();
@@ -39,9 +40,7 @@ const getPostById = async (id) => {
 	return res.json();
 }
 
-export const postLoader = async ({ req, params }) => {
+export const postLoader = async ({ params }) => {
 	const id = params.id;
 	return defer({ post: getPostById(id), id })
 }
-
-export default Post

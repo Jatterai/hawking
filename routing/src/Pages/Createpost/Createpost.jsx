@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Createpost = () => {
+export const Createpost = () => {
 	return (
 		<div className='container'>
 			<h1 className='title'>Create new post</h1>
@@ -8,5 +8,3 @@ const Createpost = () => {
 
 	)
 }
-
-export default Createpost

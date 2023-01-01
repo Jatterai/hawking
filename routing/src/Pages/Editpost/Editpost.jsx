@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 
-const Editpost = () => {
+export const Editpost = () => {
 	const { id } = useParams();
 	return (
 		<div className='container'>
@@ -9,5 +9,3 @@ const Editpost = () => {
 		</div>
 	)
 }
-
-export default Editpost
