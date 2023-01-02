@@ -37,6 +37,12 @@ export const Post = () => {
 
 const getPostById = async (id) => {
 	const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`);
+	if (!res.ok) {
+		throw new Response('string?', {
+			status: res.status,
+			statusText: '',
+		})
+	}
 	return res.json();
 }
 

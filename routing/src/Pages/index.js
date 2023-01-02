@@ -6,3 +6,4 @@ export { Error } from './Error/Error.jsx';
 export { Home } from './Home/Home.jsx';
 export { Post, postLoader } from './Post/Post.jsx';
 export { Loginpage } from './Loginpage/Loginpage.jsx';
+export { Errorpage } from './Errorpage/Errorpage.jsx';

@@ -11,8 +11,6 @@ export const Blog = () => {
 		setSearchParams({ post: searchInput });
 	}
 
-	console.log(posts)
-
 	return (
 		<div className="container">
 			<div className="title">Our news!</div>
@@ -54,6 +52,9 @@ export const Blog = () => {
 
 const getPosts = async () => {
 	const res = await fetch('https://jsonplaceholder.typicode.com/posts');
+	if (!res.ok) {
+		throw new Response('', { status: res.status, statusText: res.statusText })
+	}
 	return res.json()
 }
 
